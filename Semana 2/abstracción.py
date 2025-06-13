@@ -17,7 +17,7 @@ class Pelicula:
 
 
 # Crear un objeto Pelicula
-mi_pelicula = Pelicula("Camino hacia el terror", "Alan B. McElroy", "12,99")
+mi_pelicula = Pelicula("Camino hacia el terror", "Alan B. McElroy", "12.99")
 
 # Usar el método comprar
 mi_pelicula.comprar()
