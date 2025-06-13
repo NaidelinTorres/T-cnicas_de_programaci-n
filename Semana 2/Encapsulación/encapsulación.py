@@ -1,3 +1,4 @@
+#Ejemplo de encapsulacion
 class Musica:
     def __init__(self, nombre, artista, precio):
         self.__nombre = nombre      # atributos privados

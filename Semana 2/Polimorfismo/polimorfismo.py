@@ -1,3 +1,4 @@
+#Ejemplo de polimorfismo
 class Vehiculo:
     def mostrar_info(self):
         print("Información general del vehículo.")
@@ -14,7 +15,7 @@ class Bicicleta(Vehiculo):
     def mostrar_info(self):
         print("Bicicleta: vehículo sin motor, ecológico y saludable.")
 
-# Uso del polimorfismo
+# Código para probar polimorfismo
 vehiculos = [Vehiculo(), Auto(), Moto(), Bicicleta()]
 
 for v in vehiculos:

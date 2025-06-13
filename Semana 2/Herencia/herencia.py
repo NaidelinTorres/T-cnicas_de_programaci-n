@@ -1,3 +1,4 @@
+#Ejemplo de herencia
 class Libro:
     def __init__(self, titulo, autor, precio):
         self.titulo = titulo
@@ -16,6 +17,6 @@ class LibroDigital(Libro):
         super().mostrar_info()
         print(f"Formato: {self.formato}")
 
-# Uso
+# Código para probar las clases
 mi_libro = LibroDigital("Crepúsculo", "Stephenie Meyer", 40.49, "PDF")
 mi_libro.mostrar_info()

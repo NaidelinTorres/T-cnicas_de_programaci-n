@@ -1,3 +1,4 @@
+#Ejemplo de abstraccion
 class Pelicula:
     def __init__(self, nombre, autor, precio):
         self.nombre = nombre
