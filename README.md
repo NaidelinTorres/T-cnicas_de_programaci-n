@@ -1,1 +1,2 @@
-# T-cnicas_de_programaci-n
+# Tecnicas_de_programacion
+Bienvenidos a mi repositorio ,aprenderemos ejemplos de las técnicas de la materia de Programación Orientada a Objetos.
