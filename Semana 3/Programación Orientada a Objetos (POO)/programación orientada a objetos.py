@@ -1,4 +1,4 @@
-# Programación Orientada a Objetos (POO)
+# Programación Orientada a Objetos
 # Ejemplo: Promedio semanal de temperatura
 
 class SemanaClimatica:
