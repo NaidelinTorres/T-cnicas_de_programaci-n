@@ -1,34 +1,31 @@
-# Programación Tradicional
-# Ejemplo: Promedio semanal de temperatura
-
-# Definición de variables globales
-temperaturas = [0, 0, 0, 0, 0, 0, 0]
-dias_semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
-total_temperatura = 0
-promedio = 0
-
-# Función para registrar temperaturas diarias
-def registrar_temperaturas():
-    global temperaturas
-    for i in range(7):
+# Función para ingresar las temperaturas diarias
+def ingresar_temperaturas():
+    temperaturas = []
+    dias_semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+    for dia in dias_semana:
         while True:
             try:
-                temp = float(input(f"Ingrese la temperatura del {dias_semana[i]}: "))
-                temperaturas[i] = temp
-                break
+                temp = float(input(f"Ingrese la temperatura del {dia}: "))
+                # Validar rango de temperatura opcionalmente
+                if -50 <= temp <= 60:
+                    temperaturas.append(temp)
+                    break
+                else:
+                    print("Temperatura fuera de rango (-50 a 60 °C). Intente de nuevo.")
             except ValueError:
                 print("Por favor, ingrese un valor numérico válido.")
+    return temperaturas
 
 # Función para calcular el promedio semanal
-def calcular_promedio():
-    global total_temperatura, promedio, temperaturas
-    total_temperatura = sum(temperaturas)
-    promedio = total_temperatura / len(temperaturas)
+def calcular_promedio(temperaturas):
+    return sum(temperaturas) / len(temperaturas)
 
-# Uso de las funciones en la programación tradicional
-registrar_temperaturas()
-calcular_promedio()
+# Función principal
+def main():
+    print("Cálculo del promedio semanal del clima")
+    temperaturas = ingresar_temperaturas()
+    promedio = calcular_promedio(temperaturas)
+    print(f"El promedio semanal de temperaturas es: {promedio:.2f}°C")
 
-# Imprimir los resultados
-print("Temperaturas registradas:", temperaturas)
-print("Promedio semanal de temperatura:", round(promedio, 2), "°C")
+if __name__ == "__main__":
+    main()
